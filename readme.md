@@ -6,5 +6,6 @@ This is pretty simple. Highlighted text is saved into a variable and slapped ont
 
 #### Todo
 * ~Context menu that changes with the selected text~
+* Account for no highlighted text
 * Submit to [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/)
 
