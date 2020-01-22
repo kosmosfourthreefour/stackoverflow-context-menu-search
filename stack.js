@@ -7,12 +7,14 @@
 //// save into searchURL
 //// context title changes to "Search stackoverflow for 'highlightedWords'"
 //// On click, opens new tab at searchURL
+// ! Figure out %s
 
 
 // * create the context menu
 browser.contextMenus.create({
     id: "stack",
     title: "Search stackoverflow",
+    contexts: ["all"],
 
     icons: {
         "16": "icons/stack16.png",
@@ -21,26 +23,27 @@ browser.contextMenus.create({
 });
 
 // * on shown
-browser.contextMenus.onShown.addListener(() => {
-    let updating = browser.contextMenus.update("stack", {
-        title: "Search stackoverflow for '%s'"
-    });
-});
+// browser.contextMenus.onShown.addListener(function(info, tab) {
+//     console.log(info);
+//     // ! if %s ??
+//     let updating = browser.contextMenus.update("stack", {
+//         title: "Search stackoverflow for '%s'"
+//     });
+// });
 
 // * onclick event
 browser.contextMenus.onClicked.addListener(function (info, tab) {
     let selectedText = info.selectionText.toString();
-    // No empty strings
-    if (selectedText) {
-        // Turn the highlight into format: "this+is+our+search" 
-        let delimText = selectedText.split(" ").join("+")
-        let searchURL = `https://stackoverflow.com/search?q=${delimText}`
-        // new tab with our search term
-        browser.tabs.create({
-            url: searchURL
-        });
-    }
+    // Turn the highlight into format: "this+is+our+search" 
+    let delimText = selectedText.split(" ").join("+");
+    let searchURL = `https://stackoverflow.com/search?q=${delimText}`;
+    // new tab with our search term
+    browser.tabs.create({
+        url: searchURL
+    });
 });
+
+
 
 
 
