@@ -12,9 +12,7 @@
     },
 
     "permissions": [
-        "activeTab",
-        "contextMenus",
-        "tabs"
+        "contextMenus"
     ],
 
     "background": {
