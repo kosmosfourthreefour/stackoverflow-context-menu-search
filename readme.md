@@ -4,12 +4,13 @@
 ## About
 This is pretty simple. Highlighted text is saved into a variable and slapped onto the end of a URL. That's added to the context menu and away you go.
 
+## Link
+[stackoverflow context search](https://addons.mozilla.org/en-US/firefox/addon/stackoverflow-context-search/)
+
 #### Todo
 * ~Context menu that changes with the selected text~
 * ~Account for no highlighted text~
 * ~Submit to [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/)~
 
-#### Link
-[stackoverflow context search](https://addons.mozilla.org/en-US/firefox/addon/stackoverflow-context-search/)
 
 ###### 👓
